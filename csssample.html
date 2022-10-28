@@ -1,0 +1,107 @@
+<html>
+<head>
+<link rel="stylesheet" href="mystyle.css">
+<style>
+div.background{
+background-image: url(https://sahrdaya.linways.com/libcommon/images/teacher.png), url( https://sahrdaya.ac.in/wp-content/uploads/2022/03/5-1200x500.jpg);
+background-position: bottom right, 100% center;
+background-origin: border-box, content-box;
+background-repeat: no-repeat, repeat;  
+animation: movingImage linear 100s 2 1s alternate;
+
+}
+
+ #cover         
+{
+position: relative;            
+margin: 0 auto;         
+}         
+#cover img        
+{            
+position: absolute;            
+left: 0;            
+-webkit-transition: opacity 4s ease-in-out;            
+transition: opacity 4s ease-in-out}        
+ #cover img.top:hover            
+{ opacity:0; } 
+img{
+ position: relative; 
+transition: transform 4s; 
+-moz-transition: -moz-transform 4s; 
+-webkit-animation: skew 3s infinite linear;
+ -moz-animation: skew 3s infinite linear;   
+animation: skew 3s infinite linear
+
+}
+img:hover{
+transform: rotate(360deg) scale(2, 2);
+-moz-transform: rotate(360deg) scale(2, 2);
+}
+
+div{
+background: -webkit-gradient(
+linear, center top, center bottom, color-stop(15%, white), color-stop(50%, lightsteelblue),   color-stop(75%, navy) ); 
+)
+box-shadow:25px 25px 50px dimgrey;
+}
+form {
+border-style: solid;
+background: -moz-radial-gradient(center, yellow, red);
+background-color:lightgreen;
+font-size:20pt;
+border-radius:15px;
+color:red;
+width:700px;
+height:500px;
+text-align:center;
+}
+p{
+text-align:center;
+-webkit-text-stroke: 2px black;
+font-size:40pt;
+}
+h2
+{
+text-shadow: -4px 4px 6px dimgrey;
+font-size:400%;
+}
+@keyframes movingImage{
+ 0%   {opacity: 0; left: 50px; top: 0px;}    
+ 25%  {opacity: 1; left: 0px; top: 50px;}     
+50%  {opacity: 0; left: 50px; top: 100px;}   
+75%  {opacity: 1; left: 100px; top: 50px;}   
+100% {opacity: 0; left: 50px; top: 0px;} 
+
+}
+@keyframes skew
+{
+ from { -webkit-transform: skewX(0deg); }    
+25% { -webkit-transform: skewX(45deg); }    
+50% { -webkit-transform: skewX(0); }        
+75% { -webkit-transform: skewX(-45deg); }   
+to { -webkit-transform: skewX(0); } 
+
+}
+
+</style>
+<?head>
+<body>
+ <div class = "background"> 
+<h1 style="color:red;font-size:60pt">hello<h1>
+<h2> Sahrdaya</h2>
+<h3> new coures</h3>
+</div>
+<form >
+<div id="cover">
+<img src="https://sahrdaya.ac.in/wp-content/uploads/2022/03/5-1200x500.jpg">
+</div>
+<p>Login Page</p>
+username<input type="text" value="uname" name="username"><br>
+password<input type="password" value="pass" name="pass"><br>
+
+<input type="submit"><br>
+<input type="reset">
+</form>
+<img src="https://sahrdaya.linways.com/libcommon/images/teacher.png ">
+</body>
+<html>
